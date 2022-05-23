@@ -4,19 +4,19 @@ int number = 10;
 int data[10] = { 1,10,5,8,7,6,4,3,2,9 };
 
 void quickSort(int* data, int start, int end) {
-	if(start >= end){ //data°¡ 1°³ÀÎ °æ¿ì
+	if(start >= end){ //dataê°€ 1ê°œì¸ ê²½ìš°
 		return;
 	}
-	int key = start;//Å°´Â Ã¹¹øÂ° ¿ø¼Ò
+	int key = start;//í‚¤ëŠ” ì²«ë²ˆì§¸ ì›ì†Œ
 	int i = start + 1;
 	int j = end;
 	int temp;
 
-	while (i <= j) { //¾ù°¥¸± ¶§±îÁö ¹İº¹
-		while (data[i] <= data[key]) { // Å° °ªº¸´Ù Å« °ªÀ» ¸¸³¯ ‹š±îÁö
+	while (i <= j) { //ì—‡ê°ˆë¦´ ë•Œê¹Œì§€ ë°˜ë³µ
+		while (data[i] <= data[key]) { // í‚¤ ê°’ë³´ë‹¤ í° ê°’ì„ ë§Œë‚  Â‹Âšê¹Œì§€
 			i++;
 		}
-		while (data[j] >= data[key] && j > start) { // Å° °ªº¸´Ù ÀÛÀº °ªÀ» ¸¸³¯ ¶§±îÁö
+		while (data[j] >= data[key] && j > start) { // í‚¤ ê°’ë³´ë‹¤ ì‘ì€ ê°’ì„ ë§Œë‚  ë•Œê¹Œì§€
 			j--;
 		}
 		if (i > j) {
