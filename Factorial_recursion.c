@@ -4,10 +4,10 @@ int factorial(int n);
 
 int main() {
 	int n, result;
-	printf("Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä:");
+	printf("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”:");
 	scanf_s("%d", &n);
 	result = factorial(n);
-	printf("%dÀÇ ÆÑÅä¸®¾ó °ªÀº %dÀÔ´Ï´Ù", n, result);
+	printf("%dì˜ íŒ©í† ë¦¬ì–¼ ê°’ì€ %dì…ë‹ˆë‹¤", n, result);
 	return 0;
 }
 
