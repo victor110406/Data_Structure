@@ -8,7 +8,7 @@ typedef struct {
     int rear;
 } QueueType;
 
-// °ø¹é Å¥¸¦ »ý¼ºÇÏ´Â ¿¬»ê 
+// ê³µë°± íë¥¼ ìƒì„±í•˜ëŠ” ì—°ì‚° 
 QueueType* createQueue()
 {
     QueueType* Q;
@@ -18,7 +18,7 @@ QueueType* createQueue()
     return Q;
 }
 
-//Å¥°¡ °ø¹éÀÎÁö È®ÀÎÇÏ´Â ¿¬»ê 
+//íê°€ ê³µë°±ì¸ì§€ í™•ì¸í•˜ëŠ” ì—°ì‚° 
 int isEmpty(QueueType* Q)
 {
     if (Q->front == Q->rear) {
@@ -30,7 +30,7 @@ int isEmpty(QueueType* Q)
     }
 }
 
-//Å¥°¡ Æ÷È­ »óÅÂÀÎÁö È®ÀÎÇÏ´Â ¿¬»ê 
+//íê°€ í¬í™” ìƒíƒœì¸ì§€ í™•ì¸í•˜ëŠ” ì—°ì‚° 
 int isFull(QueueType* Q)
 {
     if (Q->rear == Q_SIZE - 1) {
@@ -42,7 +42,7 @@ int isFull(QueueType* Q)
     }
 }
 
-// Å¥ÀÇ rear¿¡ ¿ø¼Ò¸¦ »ðÀÔÇÏ´Â ¿¬»ê 
+// íì˜ rearì— ì›ì†Œë¥¼ ì‚½ìž…í•˜ëŠ” ì—°ì‚° 
 void enQueue(QueueType* Q, char item)
 {
     if (isFull(Q)) { 
@@ -54,7 +54,7 @@ void enQueue(QueueType* Q, char item)
     }
 }
 
-//Å¥ÀÇ front¿¡¼­ ¿ø¼Ò¸¦ »èÁ¦ÇÏ°í ¹ÝÈ¯ÇÏ´Â ¿¬»ê 
+//íì˜ frontì—ì„œ ì›ì†Œë¥¼ ì‚­ì œí•˜ê³  ë°˜í™˜í•˜ëŠ” ì—°ì‚° 
 char deQueue(QueueType* Q)
 {
     if (isEmpty(Q)) {
@@ -66,7 +66,7 @@ char deQueue(QueueType* Q)
     }
 }
 
-//Å¥ÀÇ °¡Àå ¾Õ¿¡ ÀÕ´Â ¿ø¼Ò¸¦ °Ë»öÇÏ¿© ¹ÝÈ¯ÇÏ´Â ¿¬»ê 
+//íì˜ ê°€ìž¥ ì•žì— ìž‡ëŠ” ì›ì†Œë¥¼ ê²€ìƒ‰í•˜ì—¬ ë°˜í™˜í•˜ëŠ” ì—°ì‚° 
 char peek(QueueType* Q)
 {
     if (isEmpty(Q)) { 
@@ -77,7 +77,7 @@ char peek(QueueType* Q)
     }
 }
 
-//Å¥ÀÇ ³»¿ëÀ» Ãâ·ÂÇÏ´Â ¿¬»ê 
+//íì˜ ë‚´ìš©ì„ ì¶œë ¥í•˜ëŠ” ì—°ì‚° 
 void printQ(QueueType* Q)
 {
     int i;
@@ -91,9 +91,9 @@ void printQ(QueueType* Q)
 int main()
 {
     QueueType* Q1 = createQueue();
-    printf("»ðÀÔ A>>"); enQueue(Q1, 'A'); printQ(Q1);
-    printf("»ðÀÔ B>>"); enQueue(Q1, 'B'); printQ(Q1);
-    printf("»ðÀÔ C>>"); enQueue(Q1, 'C'); printQ(Q1);
+    printf("ì‚½ìž… A>>"); enQueue(Q1, 'A'); printQ(Q1);
+    printf("ì‚½ìž… B>>"); enQueue(Q1, 'B'); printQ(Q1);
+    printf("ì‚½ìž… C>>"); enQueue(Q1, 'C'); printQ(Q1);
    
     return 0;
 }
