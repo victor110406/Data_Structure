@@ -2,19 +2,19 @@
 #include<stdlib.h>
 #define SIZE 100
 
-// µ¥ÀÌÅÍ¸¦ ½ºÅÃ¿¡¼­ »©´Â ÀÛ¾÷
+// ë°ì´í„°ë¥¼ ìŠ¤íƒì—ì„œ ë¹¼ëŠ” ì‘ì—…
 
 typedef struct StackType {
-	int arr[SIZE]; // intÇü µ¥ŸæÅÍ 100°³
+	int arr[SIZE]; // intí˜• ë°ÂŸå»¶ 100ê°œ
 	int top;
 }StackType;
 
-// ÃÊ±âÈ­ ÀÛ¾÷
+// ì´ˆê¸°í™” ì‘ì—…
 void init(StackType* s){
 	s->top = -1;
 }
 
-// ½ºÅÃÀÌ ºñ¾î ÀÖ´ÂÁö ÆÇ´ÜÇÏ´Â ÀÛ¾÷
+// ìŠ¤íƒì´ ë¹„ì–´ ìˆëŠ”ì§€ íŒë‹¨í•˜ëŠ” ì‘ì—…
 int is_empty(StackType* s) {
 	if (s->top == -1) {
 		return 1;
@@ -24,7 +24,7 @@ int is_empty(StackType* s) {
 	}
 }
 
-// ½ºÅÃÀÌ ²Ë Â÷ÀÖ´ÂÁö ÆÇ´ÜÇÏ´Â ÀÛ¾÷
+// ìŠ¤íƒì´ ê½‰ ì°¨ìˆëŠ”ì§€ íŒë‹¨í•˜ëŠ” ì‘ì—…
 int is_full(StackType* s) {
 	if (s->top == SIZE - 1) {
 		return 1;
@@ -34,7 +34,7 @@ int is_full(StackType* s) {
 	}
 }
 
-// µ¥ÀÌÅÍ¸¦ ½ºÅÃ¿¡¼­ ³Ö´Â ÀÛ¾÷
+// ë°ì´í„°ë¥¼ ìŠ¤íƒì—ì„œ ë„£ëŠ” ì‘ì—…
 void push(StackType* s, int value) {
 	if (is_full(s)) {
 		printf("Stack is full");
@@ -43,7 +43,7 @@ void push(StackType* s, int value) {
 	s->arr[++(s->top)] = value;
 }
 
-// µ¥ÀÌÅÍ¸¦ ½ºÅÃ¿¡¼­ »©´Â ÀÛ¾÷
+// ë°ì´í„°ë¥¼ ìŠ¤íƒì—ì„œ ë¹¼ëŠ” ì‘ì—…
 int pop(StackType* s) {
 	if (is_empty(s)) {
 		printf("Stack is empty");
@@ -52,7 +52,7 @@ int pop(StackType* s) {
 	return s->arr[(s->top)--];
 }
 
-// ÃÖ»óÀ§ ½ºÅÃ Ãâ·Â
+// ìµœìƒìœ„ ìŠ¤íƒ ì¶œë ¥
 int peek(StackType* s) {
 	if (is_empty(s)) {
 		printf("Stack is empty");
@@ -64,7 +64,7 @@ int peek(StackType* s) {
 int main() {
 
 	StackType s;
-	init(&s); //stack ÃÊ±âÈ­
+	init(&s); //stack ì´ˆê¸°í™”
 
 	push(&s, 3);
 	push(&s, 2);
